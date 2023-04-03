@@ -1,10 +1,11 @@
-spring:  
-  h2:
-    console:
-      enabled: true
-      path: /h2
-    datasource:
-      url: jdbc:h2:file:~/test
-      username: sa
-      password:
-      driverClassName: org.h2.Driver
+spring:
+  jpa:
+    database: POSTGRESQL
+    hibernate.ddl-auto: create-drop
+    show-sql: true
+  datasource:
+    platform: postgres
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/alura
+    username: postgres
+    password: 1234
